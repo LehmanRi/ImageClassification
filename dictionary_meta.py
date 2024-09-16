@@ -21,3 +21,14 @@ for item in synsets:
 
 # Display the first few items of the dictionary to verify
 print(dict(list(id_wnid_dict.items())[:10]))  # Displaying only the first 10 for brevity
+
+
+with open('.\\big_dataset\\ILSVRC2010_validation_ground_truth1.txt', 'r') as f:
+    lines = f.readlines()
+    f.write('')
+    for line in lines:
+        line = id_wnid_dict[int(line)]
+        f.write(line)
+    print(str(lines))
+    # f.write(lines)
+

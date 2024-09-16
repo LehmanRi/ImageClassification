@@ -23,7 +23,7 @@
 #
 #     # Center-crop to 224x224
 #     h, w, _ = img.shape
-#     startx = w // 2 - (224 // 2)
+#     startx = w // 2 - (224 // 2)`
 #     starty = h // 2 - (224 // 2)
 #     img = img[starty:starty + 224, startx:startx + 224]
 #
@@ -76,10 +76,10 @@ import cv2
 import numpy as np
 
 # Path to the directory containing training images
-train_dir = 'dataset/train'
+train_dir = 'big_dataset/train'
 
 # Create a directory to save the cleaned images
-cleaned_dir = 'dataset/cleaned'
+cleaned_dir = 'big_dataset/cleaned'
 if not os.path.exists(cleaned_dir):
     os.makedirs(cleaned_dir)
 
