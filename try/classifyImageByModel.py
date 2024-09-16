@@ -5,8 +5,8 @@ from tensorflow.keras.preprocessing.image import img_to_array, load_img
 
 # Paths to directories and model
 model_path = 'alexnet_model.h5'
-val_dir = 'dataset/val'  # Replace with actual validation directory path
-train_dir = 'dataset/cleaned'  # Replace with the actual training directory path
+val_dir = '../dataset/val'  # Replace with actual validation directory path
+train_dir = '../dataset/cleaned'  # Replace with the actual training directory path
 
 # Load the trained model
 model = tf.keras.models.load_model(model_path)
@@ -44,7 +44,7 @@ print(class_dict)
 
 # Example: Classify an image from the validation set
 # Provide the path to an image you want to classify
-image_path = 'dataset/val/ILSVRC2010_val_00030137.JPEG'  # Replace with actual image path
+image_path = '../dataset/val/ILSVRC2010_val_00030137.JPEG'  # Replace with actual image path
 actual_class_label = os.path.basename(os.path.dirname(image_path))  # The actual class from the folder name
 
 # Predict the class

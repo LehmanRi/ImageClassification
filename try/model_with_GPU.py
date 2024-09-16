@@ -22,7 +22,7 @@ else:
 strategy = tf.distribute.MirroredStrategy()
 
 # Paths to the directories
-train_dir = 'dataset/cleaned'
+train_dir = '../dataset/cleaned'
 
 # Image dimensions
 IMG_HEIGHT, IMG_WIDTH = 224, 224

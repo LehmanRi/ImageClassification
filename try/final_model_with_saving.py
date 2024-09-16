@@ -15,8 +15,8 @@ transform = transforms.Compose([
 ])
 
 # Load the training and validation datasets
-train_dir = 'big_dataset\\dataset_128\\augmented_dataset_128'
-val_dir = 'big_dataset\\dataset_128\\val_128'
+train_dir = '../big_dataset/dataset_128/augmented_dataset_128'
+val_dir = '../big_dataset/dataset_128/val_128'
 train_dataset = datasets.ImageFolder(train_dir, transform=transform)
 val_dataset = datasets.ImageFolder(val_dir, transform=transform)
 

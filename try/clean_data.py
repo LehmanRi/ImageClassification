@@ -76,7 +76,7 @@ import cv2
 import numpy as np
 
 # Path to the directory containing training images
-train_dir = 'big_dataset/train'
+train_dir = '../big_dataset/train'
 
 # Create a directory to save the cleaned images
 cleaned_dir = 'big_dataset/cleaned'

@@ -2,7 +2,7 @@ import scipy.io
 import numpy as np  # Import numpy
 
 # Load the .mat file
-mat_file_path = 'meta.mat'
+mat_file_path = '../meta.mat'
 mat_data = scipy.io.loadmat(mat_file_path)
 
 # Accessing the synsets field
@@ -23,7 +23,7 @@ for item in synsets:
 print(dict(list(id_wnid_dict.items())[:10]))  # Displaying only the first 10 for brevity
 
 
-with open('.\\big_dataset\\ILSVRC2010_validation_ground_truth1.txt', 'r') as f:
+with open('../big_dataset/ILSVRC2010_validation_ground_truth1.txt', 'r') as f:
     lines = f.readlines()
     f.write('')
     for line in lines:

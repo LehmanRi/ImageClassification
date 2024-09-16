@@ -187,9 +187,9 @@ def create_class_subdirs(base_dir, class_names):
         os.makedirs(os.path.join(base_dir, cls), exist_ok=True)
 
 # Assuming class_names are the same as those in the training set
-class_names = os.listdir('dataset/train')
-create_class_subdirs('dataset/val', class_names)
-create_class_subdirs('dataset/test', class_names)
+class_names = os.listdir('../dataset/train')
+create_class_subdirs('../dataset/val', class_names)
+create_class_subdirs('../dataset/test', class_names)
 
 
 data_dir = 'patch_images'
