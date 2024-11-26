@@ -15,8 +15,8 @@ transform = transforms.Compose([
 ])
 
 # Load the training and validation datasets
-train_dir = 'big_dataset\\dataset_8\\augmented_dataset_8'
-val_dir = 'big_dataset\\dataset_8\\val_8'
+train_dir = 'big_dataset/dataset_8/augmented_dataset_8'
+val_dir = 'big_dataset/dataset_8/val_8'
 train_dataset = datasets.ImageFolder(train_dir, transform=transform)
 val_dataset = datasets.ImageFolder(val_dir, transform=transform)
 
@@ -96,7 +96,7 @@ if __name__ == '__main__':
         print("CUDA not available", flush=True)
         device = torch.device("cpu")
 
-    model = AlexNet(num_classes=8)  # Changed to 128 classes
+    model = AlexNet(num_classes=8)
     print("Finish creating the model", flush=True)
     model = model.to(device)
 
@@ -105,7 +105,10 @@ if __name__ == '__main__':
 
     # Open a file to save the error rates
     with open('error_rates_8.txt', 'w') as file:
-        file.write("Epoch\tValidation Loss\tTop-1 Error Rate\tTop-5 Error Rate\n")
+        # Set the header
+        header = f"{'Epoch':<8}{'Validation Loss':<20}{'Top-1 Error Rate':<20}{'Top-5 Error Rate':<20}\n"
+        file.write(header)
+        file.write('-' * 68 + '\n')
 
         for epoch in range(num_epochs):
             model.train()
@@ -160,7 +163,8 @@ if __name__ == '__main__':
             # Check if this is the best validation loss and save the model if it is
             if val_loss < best_val_loss:
                 best_val_loss = val_loss
-                torch.save(model, 'best_alexnet_model_with_architecture_8.pth')  # Save the model
+                torch.save(model.state_dict(),
+                           'best_alexnet_weights_8.pth')  # Save only the model's weights (state_dict # Save the model
                 print(f"Saved model with validation loss: {val_loss}", flush=True)
 
             # Calculate top-1 and top-5 error rates as percentages
@@ -173,3 +177,4 @@ if __name__ == '__main__':
             # Save error rates to the text file and flush the buffer
             file.write(f"{epoch + 1}\t{val_loss:.4f}\t{top1_error_rate:.4f}\t{top5_error_rate:.4f}\n")
             file.flush()  # Ensure content is written to file after every epoch
+
