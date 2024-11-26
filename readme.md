@@ -26,6 +26,6 @@ Do the same for the val and the test.
 7.	In the same link of ImageNet (2010), download the Development kit and extract the data folder content into dataset.
 8.	Run the file create_subfolders.py. Now you have divided_val folder in dataset which contains the val images after dividing to the appropriate classes.
 9.	Run the file data_augmentation.py to create patches for the training data, to train the model on more images. Now, you will have the train data in a folder named augmented_data.
-10.	Run the file model_on_divided_val.py. 
+10.	Run the file final_model_with_saving.py. 
 11.	After the running you will have a text file named error_rates.txt which contains the top-1 and top-5 error rates and a .pth file of the model which was created.
 12.	Run the file final_test
