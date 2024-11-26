@@ -94,7 +94,7 @@ if __name__ == '__main__':
     model.eval()
 
     # Directory containing test images
-    test_dir = 'test_data'
+    test_dir = 'dataset/test_data'
 
     # Open files to save the results
     with open('test_error_rates.txt', 'w') as error_file, open('classification_results.txt', 'w') as class_file:
