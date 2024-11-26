@@ -28,4 +28,16 @@ Do the same for the val and the test.
 9.	Run the file data_augmentation.py to create patches for the training data, to train the model on more images. Now, you will have the train data in a folder named augmented_data.
 10.	Run the file final_model_with_saving.py. 
 11.	After the running you will have a text file named error_rates.txt which contains the top-1 and top-5 error rates and a .pth file of the model which was created.
-12.	Run the file final_test
+12. In order to run the model on the test images and test the model performance, you have to compare the results the model returns with the true labels of the test images. So you have to download from ImageNet a file named ILSVRC2010_test_ground_truth.txt:
+Follow this way:
+    go to imagenet site
+    go to download tab
+    click the 2010 link
+    click the link: Ground truth for test data
+    save the file (don't change the name: ILSVRC2010_test_ground_truth.txt) to the main project folder
+14. Run the file test_with_true_labels.py
+15. After the running, you will get 2 text files with the results:
+    classification_results.txt will contain the results of the images with the comparison between the true labels and the label the model returned.
+    test_error_rates.txt with top-1 and top-5 error rates after the testing.
+
+Good Luck!!!
