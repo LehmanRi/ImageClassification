@@ -70,7 +70,7 @@ patch_transform = transforms.Compose([
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Load WNID mapping from meta.mat
-meta = scipy.io.loadmat('meta.mat')
+meta = scipy.io.loadmat('dataset/meta.mat')
 number_to_wnid = {int(row[0]): row[1][0] for row in meta['meta']}
 
 # Load true labels from ILSVRC2010_test_ground_truth.txt
