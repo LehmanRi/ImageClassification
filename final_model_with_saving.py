@@ -16,7 +16,7 @@ transform = transforms.Compose([
 
 # Load the training and validation datasets
 train_dir = 'dataset/augmented_data'
-val_dir = 'dataset/val_data '
+val_dir = 'dataset/divid_val'
 train_dataset = datasets.ImageFolder(train_dir, transform=transform)
 val_dataset = datasets.ImageFolder(val_dir, transform=transform)
 
