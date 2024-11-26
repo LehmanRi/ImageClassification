@@ -9,7 +9,7 @@ output_folder = 'dataset/divided_val'  # Where to create subfolders and copy ima
 labels_file = 'dataset/ILSVRC2010_validation_ground_truth.txt'
 
 # Load the .mat file
-mat_file_path = 'meta.mat'
+mat_file_path = 'dataset/meta.mat'
 mat_data = scipy.io.loadmat(mat_file_path)
 
 # Accessing the synsets field
