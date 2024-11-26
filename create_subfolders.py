@@ -4,9 +4,9 @@ import numpy as np
 import scipy.io
 
 # Define paths
-val_images_folder = 'big_dataset/val'
-output_folder = 'big_dataset/divided_val'  # Where to create subfolders and copy images
-labels_file = 'big_dataset/ILSVRC2010_validation_ground_truth.txt'
+val_images_folder = 'dataset/val_data'
+output_folder = 'dataset/divided_val'  # Where to create subfolders and copy images
+labels_file = 'dataset/ILSVRC2010_validation_ground_truth.txt'
 
 # Load the .mat file
 mat_file_path = 'meta.mat'
